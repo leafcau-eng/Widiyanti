@@ -254,7 +254,7 @@ function AudioPlayer({ src, playing, onToggle }) {
 
   return (
     <>
-      <audio ref={audioRef} src={src} loop preload="metadata" />
+      <audio controls ref={audioRef} src={src} loop preload="metadata" />
       <div
         style={{
           position: "fixed", bottom: "90px", right: "20px", zIndex: 100,
@@ -550,7 +550,7 @@ export default function App() {
     return () => obs.disconnect();
   }, [opened]);
 
-  const audioSrc = "/mnt/user-data/uploads/Wedding_Nasheed_-_Muhammad_Al_Muqit___Lyrics_Arabic___Terjemahan___𝘈𝘳𝘢𝘣𝘪𝘤_𝘕𝘢𝘴𝘩𝘦𝘦𝘥___محمد_المقيط.mp3";
+  const audioSrc = "/wedding.mp3";
 
   // ── COVER SCREEN ──────────────────────────────────────────────────────────
   if (!opened && !intro) {
