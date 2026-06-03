@@ -53,7 +53,7 @@ function GoldParticles({ count = 80, active = true }) {
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 2);
         g.addColorStop(0, `rgba(212,175,55,${a})`);
-        g.addColorStop(0.5, `rgba(79,109,138,${a * 0.6})`);
+        g.addColorStop(0.5, `rgba(244,226,184,${a * 0.6})`);
         g.addColorStop(1, `rgba(212,175,55,0)`);
         ctx.fillStyle = g;
         ctx.fill();
@@ -95,12 +95,12 @@ const CrescentMoon = ({ size = 120, glow = true }) => (
     />
     <defs>
       <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#4F6D8A" />
-        <stop offset="50%" stopColor="#C8A95B" />
-        <stop offset="100%" stopColor="#D8C08A" />
+        <stop offset="0%" stopColor="#F4E2B8" />
+        <stop offset="50%" stopColor="#D4AF37" />
+        <stop offset="100%" stopColor="#B8960C" />
       </linearGradient>
     </defs>
-    <circle cx="82" cy="32" r="5" fill="#4F6D8A" opacity="0.9" />
+    <circle cx="82" cy="32" r="5" fill="#F4E2B8" opacity="0.9" />
   </svg>
 );
 
@@ -108,14 +108,14 @@ const GeometricPattern = ({ size = 200, opacity = 0.12 }) => (
   <svg width={size} height={size} viewBox="0 0 200 200" opacity={opacity}>
     <defs>
       <pattern id="islamic" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-        <polygon points="20,2 38,11 38,29 20,38 2,29 2,11" fill="none" stroke="#C8A95B" strokeWidth="0.8" />
-        <polygon points="20,8 32,14 32,26 20,32 8,26 8,14" fill="none" stroke="#C8A95B" strokeWidth="0.5" />
-        <line x1="20" y1="2" x2="20" y2="8" stroke="#C8A95B" strokeWidth="0.5" />
-        <line x1="38" y1="11" x2="32" y2="14" stroke="#C8A95B" strokeWidth="0.5" />
-        <line x1="38" y1="29" x2="32" y2="26" stroke="#C8A95B" strokeWidth="0.5" />
-        <line x1="20" y1="38" x2="20" y2="32" stroke="#C8A95B" strokeWidth="0.5" />
-        <line x1="2" y1="29" x2="8" y2="26" stroke="#C8A95B" strokeWidth="0.5" />
-        <line x1="2" y1="11" x2="8" y2="14" stroke="#C8A95B" strokeWidth="0.5" />
+        <polygon points="20,2 38,11 38,29 20,38 2,29 2,11" fill="none" stroke="#D4AF37" strokeWidth="0.8" />
+        <polygon points="20,8 32,14 32,26 20,32 8,26 8,14" fill="none" stroke="#D4AF37" strokeWidth="0.5" />
+        <line x1="20" y1="2" x2="20" y2="8" stroke="#D4AF37" strokeWidth="0.5" />
+        <line x1="38" y1="11" x2="32" y2="14" stroke="#D4AF37" strokeWidth="0.5" />
+        <line x1="38" y1="29" x2="32" y2="26" stroke="#D4AF37" strokeWidth="0.5" />
+        <line x1="20" y1="38" x2="20" y2="32" stroke="#D4AF37" strokeWidth="0.5" />
+        <line x1="2" y1="29" x2="8" y2="26" stroke="#D4AF37" strokeWidth="0.5" />
+        <line x1="2" y1="11" x2="8" y2="14" stroke="#D4AF37" strokeWidth="0.5" />
       </pattern>
     </defs>
     <rect width="200" height="200" fill="url(#islamic)" />
@@ -127,32 +127,32 @@ const Lantern = ({ size = 60 }) => (
     <defs>
       <radialGradient id="lanternGlow" cx="50%" cy="50%">
         <stop offset="0%" stopColor="#FFE066" stopOpacity="0.9" />
-        <stop offset="100%" stopColor="#C8A95B" stopOpacity="0.3" />
+        <stop offset="100%" stopColor="#D4AF37" stopOpacity="0.3" />
       </radialGradient>
       <filter id="lg"><feGaussianBlur stdDeviation="3" /></filter>
     </defs>
     <ellipse cx="30" cy="48" rx="22" ry="35" fill="url(#lanternGlow)" filter="url(#lg)" />
-    <rect x="27" y="8" width="6" height="10" fill="#C8A95B" rx="2" />
-    <ellipse cx="30" cy="18" rx="14" ry="5" fill="#D8C08A" />
-    <path d="M16 22 Q10 48 16 74 Q30 82 44 74 Q50 48 44 22 Z" fill="#C8A95B" opacity="0.7" />
-    <line x1="20" y1="22" x2="20" y2="74" stroke="#D8C08A" strokeWidth="0.8" opacity="0.5" />
-    <line x1="30" y1="22" x2="30" y2="74" stroke="#D8C08A" strokeWidth="0.8" opacity="0.5" />
-    <line x1="40" y1="22" x2="40" y2="74" stroke="#D8C08A" strokeWidth="0.8" opacity="0.5" />
-    <path d="M16 38 Q30 42 44 38" fill="none" stroke="#D8C08A" strokeWidth="0.8" opacity="0.5" />
-    <path d="M16 56 Q30 60 44 56" fill="none" stroke="#D8C08A" strokeWidth="0.8" opacity="0.5" />
-    <ellipse cx="30" cy="74" rx="14" ry="5" fill="#D8C08A" />
-    <path d="M24 74 L22 86 M30 74 L30 88 M36 74 L38 86" stroke="#C8A95B" strokeWidth="1.5" />
+    <rect x="27" y="8" width="6" height="10" fill="#D4AF37" rx="2" />
+    <ellipse cx="30" cy="18" rx="14" ry="5" fill="#B8960C" />
+    <path d="M16 22 Q10 48 16 74 Q30 82 44 74 Q50 48 44 22 Z" fill="#D4AF37" opacity="0.7" />
+    <line x1="20" y1="22" x2="20" y2="74" stroke="#B8960C" strokeWidth="0.8" opacity="0.5" />
+    <line x1="30" y1="22" x2="30" y2="74" stroke="#B8960C" strokeWidth="0.8" opacity="0.5" />
+    <line x1="40" y1="22" x2="40" y2="74" stroke="#B8960C" strokeWidth="0.8" opacity="0.5" />
+    <path d="M16 38 Q30 42 44 38" fill="none" stroke="#B8960C" strokeWidth="0.8" opacity="0.5" />
+    <path d="M16 56 Q30 60 44 56" fill="none" stroke="#B8960C" strokeWidth="0.8" opacity="0.5" />
+    <ellipse cx="30" cy="74" rx="14" ry="5" fill="#B8960C" />
+    <path d="M24 74 L22 86 M30 74 L30 88 M36 74 L38 86" stroke="#D4AF37" strokeWidth="1.5" />
     <ellipse cx="30" cy="48" rx="12" ry="20" fill="#FFE066" opacity="0.4" />
   </svg>
 );
 
 const ArabicOrnament = ({ size = 40 }) => (
   <svg width={size} height={size / 4} viewBox="0 0 160 40">
-    <path d="M0,20 C20,5 40,35 80,20 C120,5 140,35 160,20" fill="none" stroke="#C8A95B" strokeWidth="1.5" opacity="0.7" />
-    <circle cx="40" cy="14" r="4" fill="#C8A95B" opacity="0.6" />
-    <circle cx="80" cy="20" r="5" fill="#C8A95B" opacity="0.8" />
-    <circle cx="120" cy="14" r="4" fill="#C8A95B" opacity="0.6" />
-    <path d="M70,20 L80,8 L90,20 L80,32 Z" fill="#C8A95B" opacity="0.5" />
+    <path d="M0,20 C20,5 40,35 80,20 C120,5 140,35 160,20" fill="none" stroke="#D4AF37" strokeWidth="1.5" opacity="0.7" />
+    <circle cx="40" cy="14" r="4" fill="#D4AF37" opacity="0.6" />
+    <circle cx="80" cy="20" r="5" fill="#D4AF37" opacity="0.8" />
+    <circle cx="120" cy="14" r="4" fill="#D4AF37" opacity="0.6" />
+    <path d="M70,20 L80,8 L90,20 L80,32 Z" fill="#D4AF37" opacity="0.5" />
   </svg>
 );
 
@@ -178,13 +178,13 @@ function useCountdown(target) {
 }
 
 // ─── SCROLL REVEAL HOOK ───────────────────────────────────────────────────────
-function useReveal(threshold = 0.02) {
+function useReveal(threshold = 0.15) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold, rootMargin: "0px 0px -10% 0px" }
+      { threshold }
     );
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
@@ -202,11 +202,8 @@ function Section({ id, children, className = "" }) {
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible
-          ? "translateY(0) scale(1)"
-          : "perspective(1000px) translateY(220px) scale(0.55) rotateX(18deg)",
-        transition:
-          "opacity 2s cubic-bezier(.16,1,.3,1), transform 2s cubic-bezier(.16,1,.3,1)",
+        transform: visible ? "translateY(0)" : "translateY(40px)",
+        transition: "opacity 1s ease, transform 1s ease",
       }}
     >
       {children}
@@ -215,78 +212,28 @@ function Section({ id, children, className = "" }) {
 }
 
 // ─── GLASS CARD ───────────────────────────────────────────────────────────────
-
 const GlassCard = ({ children, style = {}, className = "" }) => (
   <div
     className={className}
     style={{
-      background:
-        "linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(255,253,248,0.35) 100%)",
+      background: "linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(10,10,10,0.6) 100%)",
       backdropFilter: "blur(20px)",
       border: "1px solid rgba(212,175,55,0.25)",
       borderRadius: "16px",
-
-      boxShadow:
-        "0 12px 50px rgba(212,175,55,0.10), inset 0 1px 0 rgba(212,175,55,0.15)",
-
-      transition:
-        "transform 0.45s cubic-bezier(.2,.8,.2,1), box-shadow 0.45s ease",
-
-      transform: "translateZ(0)",
-
+      boxShadow: "0 8px 40px rgba(212,175,55,0.08), inset 0 1px 0 rgba(212,175,55,0.15)",
       ...style,
-    }}
-    onMouseEnter={(e) => {
-      e.currentTarget.style.transform =
-        "perspective(1000px) translateY(-6px) scale(1.02)";
-      e.currentTarget.style.boxShadow =
-        "0 18px 60px rgba(212,175,55,0.18)";
-    }}
-    onMouseLeave={(e) => {
-      e.currentTarget.style.transform = "translateZ(0)";
-      e.currentTarget.style.boxShadow =
-        "0 12px 50px rgba(212,175,55,0.10), inset 0 1px 0 rgba(212,175,55,0.15)";
     }}
   >
     {children}
   </div>
 );
 
-
 // ─── DIVIDER ─────────────────────────────────────────────────────────────────
 const GoldDivider = () => (
   <div style={{ display: "flex", alignItems: "center", gap: "12px", margin: "20px 0" }}>
-    <div style={{ flex: 1, height: "1px", background: "linear-gradient(to right, transparent, #C8A95B)" }} />
-    <div style={{ color: "#C8A95B", fontSize: "18px" }}>✦</div>
-    <div style={{ flex: 1, height: "1px", background: "linear-gradient(to left, transparent, #C8A95B)" }} />
-  </div>
-);
-
-
-const FloralCorner = ({ position = "left" }) => (
-  <div
-    style={{
-      position: "absolute",
-      [position === "left" ? "left" : "right"]: "-30px",
-      [position === "left" ? "top" : "bottom"]: "-20px",
-      opacity: 0.16,
-      pointerEvents: "none",
-      transform: position === "left" ? "rotate(-8deg)" : "rotate(8deg)",
-    }}
-  >
-    <svg width="180" height="180" viewBox="0 0 180 180">
-      <g fill="none">
-        <path
-          d="M90 160 C70 120 60 90 75 55"
-          stroke="#C8A95B"
-          strokeWidth="1.5"
-        />
-        <ellipse cx="65" cy="60" rx="12" ry="24" fill="#C8A95B" fillOpacity="0.18" />
-        <ellipse cx="82" cy="42" rx="10" ry="20" fill="#7FA5C4" fillOpacity="0.16" />
-        <ellipse cx="95" cy="72" rx="11" ry="22" fill="#C8A95B" fillOpacity="0.14" />
-        <circle cx="78" cy="52" r="4" fill="#D8C08A" fillOpacity="0.35" />
-      </g>
-    </svg>
+    <div style={{ flex: 1, height: "1px", background: "linear-gradient(to right, transparent, #D4AF37)" }} />
+    <div style={{ color: "#D4AF37", fontSize: "18px" }}>✦</div>
+    <div style={{ flex: 1, height: "1px", background: "linear-gradient(to left, transparent, #D4AF37)" }} />
   </div>
 );
 
@@ -311,7 +258,7 @@ function AudioPlayer({ src, playing, onToggle }) {
       <div
         style={{
           position: "fixed", bottom: "90px", right: "20px", zIndex: 100,
-          background: "linear-gradient(135deg, rgba(255,253,248,0.85), rgba(127,165,196,0.9))",
+          background: "linear-gradient(135deg, rgba(10,10,10,0.95), rgba(11,61,46,0.9))",
           border: "1px solid rgba(212,175,55,0.4)",
           borderRadius: "50px", padding: "8px 16px",
           display: "flex", alignItems: "center", gap: "12px",
@@ -323,17 +270,17 @@ function AudioPlayer({ src, playing, onToggle }) {
           onClick={onToggle}
           style={{
             background: "none", border: "none", cursor: "pointer",
-            color: "#C8A95B", fontSize: "20px", display: "flex", alignItems: "center",
+            color: "#D4AF37", fontSize: "20px", display: "flex", alignItems: "center",
           }}
         >
           {playing ? "⏸" : "▶"}
         </button>
         <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          <span style={{ color: "#C8A95B", fontSize: "12px" }}>🎵</span>
+          <span style={{ color: "#D4AF37", fontSize: "12px" }}>🎵</span>
           <input
             type="range" min="0" max="1" step="0.05" value={vol}
             onChange={(e) => setVol(+e.target.value)}
-            style={{ width: "60px", accentColor: "#C8A95B", cursor: "pointer" }}
+            style={{ width: "60px", accentColor: "#D4AF37", cursor: "pointer" }}
           />
         </div>
       </div>
@@ -358,11 +305,11 @@ function FloatingNav({ active }) {
       style={{
         position: "fixed", bottom: "20px", left: "50%", transform: "translateX(-50%)",
         zIndex: 200, display: "flex", gap: "4px",
-        background: "linear-gradient(135deg, rgba(255,253,248,0.85), rgba(127,165,196,0.9))",
+        background: "linear-gradient(135deg, rgba(10,10,10,0.95), rgba(11,61,46,0.9))",
         border: "1px solid rgba(212,175,55,0.3)",
         borderRadius: "50px", padding: "8px 16px",
         backdropFilter: "blur(20px)",
-        boxShadow: "0 8px 40px rgba(212,175,55,0.12), 0 0 20px rgba(212,175,55,0.1)",
+        boxShadow: "0 8px 40px rgba(0,0,0,0.5), 0 0 20px rgba(212,175,55,0.1)",
       }}
     >
       {items.map((item) => (
@@ -373,7 +320,7 @@ function FloatingNav({ active }) {
           style={{
             background: active === item.id ? "rgba(212,175,55,0.2)" : "none",
             border: "none", cursor: "pointer",
-            color: active === item.id ? "#C8A95B" : "rgba(79,109,138,0.80)",
+            color: active === item.id ? "#D4AF37" : "rgba(244,226,184,0.5)",
             fontSize: "18px", padding: "8px 10px", borderRadius: "40px",
             transition: "all 0.3s ease",
           }}
@@ -412,7 +359,7 @@ function RSVPForm() {
   const inputStyle = {
     width: "100%", background: "rgba(212,175,55,0.06)",
     border: "1px solid rgba(212,175,55,0.25)", borderRadius: "10px",
-    padding: "12px 16px", color: "#4F6D8A", fontSize: "14px",
+    padding: "12px 16px", color: "#F4E2B8", fontSize: "14px",
     outline: "none", boxSizing: "border-box",
     fontFamily: "Poppins, sans-serif",
   };
@@ -422,10 +369,10 @@ function RSVPForm() {
       {sent ? (
         <div style={{ textAlign: "center", padding: "40px" }}>
           <div style={{ fontSize: "60px", marginBottom: "16px" }}>✨</div>
-          <p style={{ color: "#C8A95B", fontSize: "20px", fontFamily: "'Playfair Display', serif" }}>
+          <p style={{ color: "#D4AF37", fontSize: "20px", fontFamily: "'Playfair Display', serif" }}>
             Jazakallah Khairan
           </p>
-          <p style={{ color: "#4F6D8A", opacity: 0.7, fontSize: "14px" }}>
+          <p style={{ color: "#F4E2B8", opacity: 0.7, fontSize: "14px" }}>
             Doa dan kehadiran Anda sangat berarti bagi kami
           </p>
         </div>
@@ -450,7 +397,7 @@ function RSVPForm() {
               style={{ ...inputStyle }}
             >
               {[1, 2, 3, 4, 5].map((n) => (
-                <option key={n} value={n} style={{ background: "#FFFDF8" }}>
+                <option key={n} value={n} style={{ background: "#0A0A0A" }}>
                   {n} Orang
                 </option>
               ))}
@@ -460,8 +407,8 @@ function RSVPForm() {
               onChange={(e) => handle("hadir", e.target.value)}
               style={{ ...inputStyle }}
             >
-              <option value="hadir" style={{ background: "#FFFDF8" }}>Hadir ✓</option>
-              <option value="tidak" style={{ background: "#FFFDF8" }}>Tidak Hadir</option>
+              <option value="hadir" style={{ background: "#0A0A0A" }}>Hadir ✓</option>
+              <option value="tidak" style={{ background: "#0A0A0A" }}>Tidak Hadir</option>
             </select>
           </div>
           <textarea
@@ -474,9 +421,9 @@ function RSVPForm() {
           <button
             onClick={submit}
             style={{
-              background: "linear-gradient(135deg, #C8A95B, #D8C08A)",
+              background: "linear-gradient(135deg, #D4AF37, #B8960C)",
               border: "none", borderRadius: "50px", padding: "14px",
-              color: "#FAF5EA", fontFamily: "'Playfair Display', serif",
+              color: "#0A0A0A", fontFamily: "'Playfair Display', serif",
               fontSize: "16px", fontWeight: "700", cursor: "pointer",
               letterSpacing: "1px",
               boxShadow: "0 4px 20px rgba(212,175,55,0.4)",
@@ -492,7 +439,7 @@ function RSVPForm() {
         <div style={{ marginTop: "40px" }}>
           <GoldDivider />
           <h3 style={{
-            textAlign: "center", color: "#C8A95B",
+            textAlign: "center", color: "#D4AF37",
             fontFamily: "'Playfair Display', serif", fontSize: "20px", marginBottom: "20px"
           }}>
             Doa & Ucapan Tamu
@@ -501,16 +448,16 @@ function RSVPForm() {
             {wishes.slice(0, 10).map((w, i) => (
               <GlassCard key={i} style={{ padding: "16px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "6px" }}>
-                  <span style={{ color: "#C8A95B", fontWeight: "700", fontSize: "14px" }}>{w.name}</span>
-                  <span style={{ color: "#4F6D8A", opacity: 0.4, fontSize: "11px" }}>{w.time}</span>
+                  <span style={{ color: "#D4AF37", fontWeight: "700", fontSize: "14px" }}>{w.name}</span>
+                  <span style={{ color: "#F4E2B8", opacity: 0.4, fontSize: "11px" }}>{w.time}</span>
                 </div>
-                <p style={{ color: "#4F6D8A", opacity: 0.8, fontSize: "13px", lineHeight: 1.6, margin: 0 }}>
+                <p style={{ color: "#F4E2B8", opacity: 0.8, fontSize: "13px", lineHeight: 1.6, margin: 0 }}>
                   {w.ucapan}
                 </p>
                 <span style={{
                   display: "inline-block", marginTop: "8px",
                   fontSize: "11px", padding: "2px 10px", borderRadius: "20px",
-                  background: w.hadir === "hadir" ? "rgba(127,165,196,0.6)" : "rgba(10212,175,55,0.08)",
+                  background: w.hadir === "hadir" ? "rgba(11,61,46,0.6)" : "rgba(100,0,0,0.4)",
                   color: w.hadir === "hadir" ? "#4CAF50" : "#EF5350",
                   border: `1px solid ${w.hadir === "hadir" ? "#4CAF50" : "#EF5350"}`,
                 }}>
@@ -536,24 +483,24 @@ function GiftItem({ label, number, name }) {
   };
   return (
     <GlassCard style={{ padding: "20px", textAlign: "center" }}>
-      <div style={{ color: "#C8A95B", fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", textTransform: "uppercase", marginBottom: "8px" }}>
+      <div style={{ color: "#D4AF37", fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "8px" }}>
         {label}
       </div>
       <div style={{
-        color: "#4F6D8A", fontSize: "22px", fontFamily: "'Playfair Display', serif",
-        letterSpacing: "3px", textTransform: "uppercase", marginBottom: "6px",
+        color: "#F4E2B8", fontSize: "22px", fontFamily: "'Playfair Display', serif",
+        letterSpacing: "2px", marginBottom: "6px",
       }}>
         {number}
       </div>
-      <div style={{ color: "#C8A95B", fontSize: "13px", opacity: 0.8, marginBottom: "16px" }}>
+      <div style={{ color: "#D4AF37", fontSize: "13px", opacity: 0.8, marginBottom: "16px" }}>
         a.n. {name}
       </div>
       <button
         onClick={copy}
         style={{
-          background: copied ? "rgba(127,165,196,0.8)" : "rgba(212,175,55,0.15)",
+          background: copied ? "rgba(11,61,46,0.8)" : "rgba(212,175,55,0.15)",
           border: `1px solid ${copied ? "#4CAF50" : "rgba(212,175,55,0.4)"}`,
-          color: copied ? "#4CAF50" : "#C8A95B",
+          color: copied ? "#4CAF50" : "#D4AF37",
           borderRadius: "50px", padding: "8px 20px",
           cursor: "pointer", fontSize: "13px", fontFamily: "Poppins, sans-serif",
           transition: "all 0.3s",
@@ -609,7 +556,7 @@ export default function App() {
   if (!opened && !intro) {
     return (
       <div style={{
-        minHeight: "100vh", background: "#FFFDF8",
+        minHeight: "100vh", background: "#050508",
         display: "flex", flexDirection: "column", alignItems: "center",
         justifyContent: "center", position: "relative", overflow: "hidden",
         fontFamily: "Poppins, sans-serif",
@@ -618,10 +565,10 @@ export default function App() {
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
           * { margin: 0; padding: 0; box-sizing: border-box; }
-          body { background: #FFFDF8; }
+          body { background: #050508; }
           ::-webkit-scrollbar { width: 4px; }
-          ::-webkit-scrollbar-track { background: #FAF5EA; }
-          ::-webkit-scrollbar-thumb { background: #C8A95B; border-radius: 4px; }
+          ::-webkit-scrollbar-track { background: #0A0A0A; }
+          ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
           @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
           @keyframes pulse-gold { 0%,100%{box-shadow:0 0 20px rgba(212,175,55,0.3)} 50%{box-shadow:0 0 50px rgba(212,175,55,0.6)} }
           @keyframes rotate-slow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
@@ -631,180 +578,63 @@ export default function App() {
           @keyframes starTwinkle { 0%,100%{opacity:0.3} 50%{opacity:1} }
         `}</style>
 
-        {null}
+        <GoldParticles count={60} active={true} />
 
-        {/* Floral Space */}
+        {/* Stars */}
+        {[...Array(30)].map((_, i) => (
+          <div key={i} style={{
+            position: "fixed",
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 80}%`,
+            width: `${Math.random() * 3 + 1}px`,
+            height: `${Math.random() * 3 + 1}px`,
+            background: "#F4E2B8", borderRadius: "50%",
+            animation: `starTwinkle ${2 + Math.random() * 3}s ease-in-out infinite`,
+            animationDelay: `${Math.random() * 3}s`,
+          }} />
+        ))}
 
-        {/* Floral Decoration Space */}
+        {/* Corner patterns */}
+        <div style={{ position: "fixed", top: 0, left: 0, opacity: 0.15 }}>
+          <GeometricPattern size={200} opacity={1} />
+        </div>
+        <div style={{ position: "fixed", top: 0, right: 0, opacity: 0.15, transform: "scaleX(-1)" }}>
+          <GeometricPattern size={200} opacity={1} />
+        </div>
 
         {/* Lanterns */}
         <div style={{ position: "fixed", top: "5%", left: "5%", animation: "lanternSwing 4s ease-in-out infinite", opacity: 0.7 }}>
-          {null}
+          <Lantern size={50} />
         </div>
         <div style={{ position: "fixed", top: "5%", right: "5%", animation: "lanternSwing 3.5s ease-in-out infinite reverse", opacity: 0.7 }}>
-          {null}
+          <Lantern size={45} />
         </div>
         <div style={{ position: "fixed", top: "15%", left: "15%", animation: "lanternSwing 5s ease-in-out infinite", opacity: 0.4 }}>
-          {null}
+          <Lantern size={30} />
         </div>
         <div style={{ position: "fixed", top: "15%", right: "15%", animation: "lanternSwing 4.5s ease-in-out infinite reverse", opacity: 0.4 }}>
-          {null}
+          <Lantern size={30} />
         </div>
 
         {/* Ambient glow bg */}
         <div style={{
-          background: "radial-gradient(circle at 20% 20%, rgba(127,165,196,0.18) 0%, transparent 35%), radial-gradient(circle at 80% 20%, rgba(212,175,55,0.10) 0%, transparent 35%), radial-gradient(circle at 50% 80%, rgba(255,245,235,0.95) 0%, transparent 60%), linear-gradient(180deg, #FFFDF8 0%, #FAF5EA 100%)",
+          position: "fixed", inset: 0, zIndex: 0,
+          background: "radial-gradient(ellipse at 50% 30%, rgba(11,61,46,0.25) 0%, transparent 60%), radial-gradient(ellipse at 50% 80%, rgba(212,175,55,0.05) 0%, transparent 50%)",
         }} />
 
-        <div style={{
-          position:"fixed",
-          top:"20px",
-          left:"20px",
-          right:"20px",
-          bottom:"20px",
-          border:"1.5px solid rgba(212,175,55,0.35)",
-          borderRadius:"320px 320px 60px 60px",
-          pointerEvents:"none",
-          zIndex:1
-        }} />
-
-        
-{/* Floral Corner Top Left */}
-<div
-  style={{
-    position: "fixed",
-    top: "35px",
-    left: "35px",
-    zIndex: 2,
-    fontSize: "90px",
-    opacity: 0.10,
-    pointerEvents: "none",
-    transform: "rotate(-12deg)",
-    animation: "float 8s ease-in-out infinite",
-  }}
->
-  🌿
-</div>
-
-{/* Floral Corner Bottom Right */}
-<div
-  style={{
-    position: "fixed",
-    bottom: "35px",
-    right: "35px",
-    zIndex: 2,
-    fontSize: "90px",
-    opacity: 0.10,
-    pointerEvents: "none",
-    transform: "rotate(12deg)",
-    animation: "float 9s ease-in-out infinite",
-  }}
->
-  🌿
-</div>
-
-
-{/* Royal Top Ornament */}
-<div
-  style={{
-    position: "fixed",
-    top: "95px",
-    left: "50%",
-    transform: "translateX(-50%)",
-    color: "rgba(212,175,55,0.55)",
-    fontSize: "22px",
-    zIndex: 3,
-    pointerEvents: "none",
-    letterSpacing: "10px",
-  }}
->
-  ✦ ✧ ✦
-</div>
-
-{/* Royal Bottom Ornament */}
-<div
-  style={{
-    position: "fixed",
-    bottom: "95px",
-    left: "50%",
-    transform: "translateX(-50%)",
-    color: "rgba(212,175,55,0.45)",
-    fontSize: "20px",
-    zIndex: 3,
-    pointerEvents: "none",
-    letterSpacing: "10px",
-  }}
->
-  ✦ ✧ ✦
-</div>
-
-
-{/* Gold Dust */}
-{[
-  {left:'12%',top:'18%'},
-  {left:'82%',top:'24%'},
-  {left:'18%',top:'62%'},
-  {left:'74%',top:'78%'},
-  {left:'50%',top:'35%'}
-].map((p,i)=>(
-  <div
-    key={i}
-    style={{
-      position:'fixed',
-      left:p.left,
-      top:p.top,
-      width:'4px',
-      height:'4px',
-      borderRadius:'50%',
-      background:'rgba(212,175,55,0.45)',
-      boxShadow:'0 0 12px rgba(212,175,55,0.6)',
-      zIndex:2,
-      pointerEvents:'none',
-      animation:`float ${6+i}s ease-in-out infinite`
-    }}
-  />
-))}
-
-
-{/* Paper Texture */}
-<div
-  style={{
-    position: "fixed",
-    inset: 0,
-    opacity: 0.035,
-    pointerEvents: "none",
-    zIndex: 0,
-    backgroundImage: `
-      radial-gradient(circle at 20% 30%, rgba(0,0,0,.12) 1px, transparent 1px),
-      radial-gradient(circle at 70% 60%, rgba(0,0,0,.08) 1px, transparent 1px),
-      radial-gradient(circle at 40% 80%, rgba(0,0,0,.10) 1px, transparent 1px)
-    `,
-    backgroundSize: "120px 120px, 160px 160px, 200px 200px",
-  }}
-/>
-
-{/* Main content */}
-
-
-
-
-        <div style={{ position: "relative", zIndex: 10, textAlign: "center", padding: "50px 30px", margin: "20px", width: "calc(100% - 40px)", maxWidth: "560px", background: "rgba(255,255,255,0.72)", backdropFilter: "blur(28px)", border: "1px solid rgba(127,165,196,0.25)", borderRadius: "40px", boxShadow: "0 30px 120px rgba(212,175,55,0.15), 0 10px 60px rgba(79,109,138,0.12)" }}>
+        {/* Main content */}
+        <div style={{ position: "relative", zIndex: 10, textAlign: "center", padding: "20px", maxWidth: "500px" }}>
           
           {/* Crescent */}
           <div style={{ animation: "float 4s ease-in-out infinite", marginBottom: "16px" }}>
-            {null}
+            <CrescentMoon size={80} />
           </div>
 
-          
-<FloralCorner position="left" />
-<FloralCorner position="right" />
-
-{/* Bismillah */}
-
+          {/* Bismillah */}
           <div style={{
             fontFamily: "'Amiri', serif", fontSize: "clamp(22px, 5vw, 32px)",
-            color: "#C8A95B", marginBottom: "12px",
-            textShadow: "0 0 12px rgba(212,175,55,0.25), 0 0 40px rgba(212,175,55,0.15)",
+            color: "#D4AF37", marginBottom: "12px",
+            textShadow: "0 0 30px rgba(212,175,55,0.5)",
             animation: "fadeInUp 1s ease 0.2s both",
           }}>
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
@@ -814,89 +644,18 @@ export default function App() {
 
           {/* The Wedding Of */}
           <div style={{
-            color: "#7FA5C4", letterSpacing: "5px",
-            fontSize: "10px", opacity: 0.65, textTransform: "uppercase", margin: "16px 0 8px",
+            color: "rgba(244,226,184,0.5)", letterSpacing: "5px",
+            fontSize: "11px", textTransform: "uppercase", margin: "16px 0 8px",
             animation: "fadeInUp 1s ease 0.4s both",
           }}>
             The Wedding Of
           </div>
 
-          
-<div
-  style={{
-    width: "110px",
-    height: "110px",
-    margin: "20px auto 28px",
-    borderRadius: "50%",
-    border: "1px solid rgba(212,175,55,0.35)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    background:
-      "radial-gradient(circle, rgba(212,175,55,0.12), transparent 70%)",
-    boxShadow:
-      "0 0 40px rgba(212,175,55,0.15), inset 0 0 20px rgba(212,175,55,0.08)",
-    animation: "float 8s ease-in-out infinite",
-  }}
->
-  <span
-    style={{
-      fontFamily: "'Playfair Display', serif",
-      fontSize: "40px",
-      color: "#C8A95B",
-      letterSpacing: "3px", textTransform: "uppercase",
-      fontWeight: "600",
-    }}
-  >
-    BW
-  </span>
-</div>
-
-<div
-  style={{
-    position: "relative",
-    marginBottom: "10px",
-  }}
->
-  <div
-    style={{
-      position: "absolute",
-      inset: "-40px",
-      background:
-        "radial-gradient(circle, rgba(212,175,55,0.18), transparent 70%)",
-      filter: "blur(40px)",
-      pointerEvents: "none",
-    }}
-  />
-
-
-<div
-  style={{
-    position: "absolute",
-    left: "50%",
-    top: "50%",
-    transform: "translate(-50%, -50%)",
-    fontFamily: "'Playfair Display', serif",
-    fontSize: "140px",
-    fontWeight: "700",
-    color: "rgba(212,175,55,0.02)",
-    lineHeight: 1,
-    pointerEvents: "none",
-    zIndex: 0,
-    userSelect: "none",
-    letterSpacing: "-8px",
-  }}
->
-  BW
-</div>
-
-{/* Names */}
-
-
+          {/* Names */}
           <h1 style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(54px, 15vw, 96px)",
-            background: "linear-gradient(135deg, #35516B 0%, #C8A95B 45%, #E0C987 65%, #35516B 100%)",
+            fontSize: "clamp(42px, 12vw, 72px)",
+            background: "linear-gradient(135deg, #F4E2B8 0%, #D4AF37 40%, #B8960C 60%, #F4E2B8 100%)",
             backgroundSize: "200% auto",
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             animation: "shimmer 4s linear infinite, fadeInUp 1s ease 0.6s both",
@@ -904,57 +663,43 @@ export default function App() {
           }}>
             Balhaz
           </h1>
-          <div style={{ color: "#C8A95B", fontSize: "28px", margin: "0", animation: "float 3s ease-in-out infinite" }}>
+          <div style={{ color: "#D4AF37", fontSize: "28px", margin: "0", animation: "float 3s ease-in-out infinite" }}>
             &
           </div>
           <h1 style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(54px, 15vw, 96px)",
-            background: "linear-gradient(135deg, #35516B 0%, #C8A95B 45%, #E0C987 65%, #35516B 100%)",
+            fontSize: "clamp(42px, 12vw, 72px)",
+            background: "linear-gradient(135deg, #F4E2B8 0%, #D4AF37 40%, #B8960C 60%, #F4E2B8 100%)",
             backgroundSize: "200% auto",
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             animation: "shimmer 4s linear infinite 0.5s, fadeInUp 1s ease 0.8s both",
             lineHeight: 1.1,
           }}>
-            Widianti
+            Widiyanti
           </h1>
 
-          </div>
-
-{/* Date */}
+          {/* Date */}
           <div style={{
             margin: "20px auto",
-            background: "linear-gradient(135deg, rgba(212,175,55,0.08), rgba(127,165,196,0.3))",
+            background: "linear-gradient(135deg, rgba(212,175,55,0.08), rgba(11,61,46,0.3))",
             border: "1px solid rgba(212,175,55,0.3)",
             borderRadius: "50px", padding: "10px 28px", display: "inline-block",
             animation: "fadeInUp 1s ease 1s both",
           }}>
-            <span style={{ color: "#C8A95B", fontSize: "14px", letterSpacing: "3px", fontFamily: "'Playfair Display', serif" }}>
+            <span style={{ color: "#D4AF37", fontSize: "14px", letterSpacing: "3px", fontFamily: "'Playfair Display', serif" }}>
               02 Juli 2026
             </span>
           </div>
 
-          <div
-            style={{
-              marginTop: "10px",
-              fontSize: "11px",
-              letterSpacing: "3px",
-              color: "rgba(79,109,138,0.65)",
-              textTransform: "uppercase",
-            }}
-          >
-            Bandung Barat • Jawa Barat
-          </div>
-
           {/* Guest */}
           <div style={{
-            color: "#4F6D8A", fontSize: "13px", margin: "16px 0 8px",
+            color: "rgba(244,226,184,0.6)", fontSize: "13px", margin: "16px 0 8px",
             animation: "fadeInUp 1s ease 1.2s both",
           }}>
             Kepada Yth.
           </div>
           <div style={{
-            color: "#4F6D8A", fontFamily: "'Playfair Display', serif",
+            color: "#F4E2B8", fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(16px, 4vw, 20px)", marginBottom: "32px",
             animation: "fadeInUp 1s ease 1.4s both",
           }}>
@@ -968,12 +713,12 @@ export default function App() {
             onClick={openInvitation}
             style={{
               background: hoverOpen
-                ? "linear-gradient(135deg, #4F6D8A, #C8A95B)"
-                : "linear-gradient(135deg, #C8A95B, #D8C08A)",
+                ? "linear-gradient(135deg, #F4E2B8, #D4AF37)"
+                : "linear-gradient(135deg, #D4AF37, #B8960C)",
               border: "none", borderRadius: "50px",
-              padding: "12px 34px", cursor: "pointer",
-              color: "#FAF5EA", fontFamily: "'Playfair Display', serif",
-              fontSize: "14px", fontWeight: "700", letterSpacing: "3px", textTransform: "uppercase",
+              padding: "16px 48px", cursor: "pointer",
+              color: "#0A0A0A", fontFamily: "'Playfair Display', serif",
+              fontSize: "17px", fontWeight: "700", letterSpacing: "2px",
               boxShadow: hoverOpen
                 ? "0 8px 50px rgba(212,175,55,0.6)"
                 : "0 4px 30px rgba(212,175,55,0.3)",
@@ -986,7 +731,15 @@ export default function App() {
           </button>
         </div>
 
+        {/* Bottom text */}
+        <div style={{
+          position: "fixed", bottom: "20px", left: "50%", transform: "translateX(-50%)",
+          color: "rgba(244,226,184,0.25)", fontSize: "11px", letterSpacing: "2px",
+          textTransform: "uppercase", zIndex: 10,
+        }}>
+          Scroll to explore
         </div>
+      </div>
     );
   }
 
@@ -994,7 +747,7 @@ export default function App() {
   if (intro) {
     return (
       <div style={{
-        minHeight: "100vh", background: "#FFFDF8",
+        minHeight: "100vh", background: "#000",
         display: "flex", alignItems: "center", justifyContent: "center",
         position: "fixed", inset: 0, zIndex: 9999,
       }}>
@@ -1004,20 +757,20 @@ export default function App() {
           @keyframes introFadeOut { 0%{opacity:1} 100%{opacity:0} }
           @keyframes moonRise { 0%{opacity:0;transform:translateY(30px)} 100%{opacity:1;transform:translateY(0)} }
         `}</style>
-        {null}
+        <GoldParticles count={100} active={true} />
         <div style={{ textAlign: "center", animation: "introGlow 3.5s ease forwards" }}>
           <div style={{ animation: "moonRise 1s ease 0.3s both" }}>
-            {null}
+            <CrescentMoon size={120} />
           </div>
           <div style={{
             fontFamily: "'Playfair Display', serif", fontSize: "48px",
-            background: "linear-gradient(135deg, #4F6D8A, #C8A95B, #4F6D8A)",
+            background: "linear-gradient(135deg, #F4E2B8, #D4AF37, #F4E2B8)",
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             marginTop: "20px",
           }}>
-            
+            B ♡ W
           </div>
-          <div style={{ color: "#7FA5C4", fontSize: "13px", letterSpacing: "4px", marginTop: "12px" }}>
+          <div style={{ color: "rgba(244,226,184,0.5)", fontSize: "13px", letterSpacing: "4px", marginTop: "12px" }}>
             02 . 07 . 2026
           </div>
         </div>
@@ -1028,8 +781,8 @@ export default function App() {
   // ── MAIN CONTENT ──────────────────────────────────────────────────────────
   const mainBg = {
     minHeight: "100vh",
-    background: "#FFFDF8",
-    color: "#4F6D8A",
+    background: "#050508",
+    color: "#F4E2B8",
     fontFamily: "Poppins, sans-serif",
     overflowX: "hidden",
   };
@@ -1039,10 +792,10 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: #FFFDF8; }
+        body { background: #050508; }
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #FAF5EA; }
-        ::-webkit-scrollbar-thumb { background: #C8A95B; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
         @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
         @keyframes shimmer { 0%{background-position:200% center} 100%{background-position:-200% center} }
         @keyframes rotate-slow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
@@ -1050,18 +803,30 @@ export default function App() {
         @keyframes lanternSwing { 0%,100%{transform:rotate(-4deg)} 50%{transform:rotate(4deg)} }
         @keyframes starTwinkle { 0%,100%{opacity:0.2} 50%{opacity:0.9} }
         @keyframes countPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
-        select option { background: #FAF5EA !important; color: #4F6D8A !important; }
-        input::placeholder, textarea::placeholder { color: rgba(79,109,138,0.55) !important; }
+        select option { background: #0A0A0A !important; color: #F4E2B8 !important; }
+        input::placeholder, textarea::placeholder { color: rgba(244,226,184,0.35) !important; }
         input, textarea, select { font-family: Poppins, sans-serif !important; }
       `}</style>
 
-      {null}
+      <GoldParticles count={70} active={playing} />
 
+      {/* Stars */}
+      {[...Array(25)].map((_, i) => (
+        <div key={i} style={{
+          position: "fixed",
+          left: `${(i * 37 + 13) % 100}%`,
+          top: `${(i * 53 + 7) % 70}%`,
+          width: `${(i % 3) + 1}px`, height: `${(i % 3) + 1}px`,
+          background: "#F4E2B8", borderRadius: "50%",
+          animation: `starTwinkle ${2 + (i % 4)}s ease-in-out infinite`,
+          animationDelay: `${(i * 0.3) % 3}s`, pointerEvents: "none", zIndex: 0,
+        }} />
+      ))}
 
       {/* Ambient background */}
       <div style={{
         position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none",
-        background: "radial-gradient(ellipse at 20% 20%, rgba(127,165,196,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(212,175,55,0.04) 0%, transparent 40%)",
+        background: "radial-gradient(ellipse at 20% 20%, rgba(11,61,46,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(212,175,55,0.04) 0%, transparent 40%)",
       }} />
 
       <AudioPlayer src={audioSrc} playing={playing} onToggle={() => setPlaying((p) => !p)} />
@@ -1073,91 +838,52 @@ export default function App() {
         alignItems: "center", justifyContent: "center",
         position: "relative", padding: "40px 20px", textAlign: "center",
       }}>
-
-        {/* Premium Frame */}
-
-        <svg
-          viewBox="0 0 1000 300"
-          style={{
-            position: "absolute",
-            top: "20px",
-            left: 0,
-            width: "100%",
-            height: "180px",
-            opacity: 0.9,
-            pointerEvents: "none",
-            zIndex: 0,
-          }}
-        >
-          <path
-            d="M120 180 L300 40 L500 120 L700 50 L880 180"
-            fill="none"
-            stroke="rgba(212,175,55,0.8)"
-            strokeWidth="4"
-          />
-          <path
-            d="M120 100 L320 180 L500 60 L680 180 L880 100"
-            fill="none"
-            stroke="rgba(212,175,55,0.5)"
-            strokeWidth="4"
-          />
-        </svg>
-
-        <div
-          style={{
-            position: "absolute",
-            inset: "18px",
-            border: "1px solid rgba(212,175,55,0.35)",
-            borderRadius: "36px",
-            pointerEvents: "none",
-            zIndex: 0,
-          }}
-        />
-
-        <div
-          style={{
-            position: "absolute",
-            inset: "34px",
-            border: "1px solid rgba(212,175,55,0.12)",
-            borderRadius: "36px",
-            pointerEvents: "none",
-            zIndex: 0,
-          }}
-        />
+        <div style={{ position: "absolute", top: 0, left: 0, opacity: 0.08 }}>
+          <GeometricPattern size={250} opacity={1} />
+        </div>
+        <div style={{ position: "absolute", top: 0, right: 0, opacity: 0.08, transform: "scaleX(-1)" }}>
+          <GeometricPattern size={250} opacity={1} />
+        </div>
+        <div style={{ position: "absolute", top: "5%", left: "4%", animation: "lanternSwing 4s ease-in-out infinite" }}>
+          <Lantern size={55} />
+        </div>
+        <div style={{ position: "absolute", top: "5%", right: "4%", animation: "lanternSwing 3.5s ease-in-out infinite reverse" }}>
+          <Lantern size={50} />
+        </div>
 
         <div style={{ position: "relative", zIndex: 2 }}>
           <div style={{ animation: "float 5s ease-in-out infinite" }}>
-            {null}
+            <CrescentMoon size={90} />
           </div>
           <div style={{
             fontFamily: "'Amiri', serif", fontSize: "clamp(20px, 5vw, 30px)",
-            color: "#C8A95B", marginBottom: "10px", marginTop: "16px",
+            color: "#D4AF37", marginBottom: "10px", marginTop: "16px",
             textShadow: "0 0 30px rgba(212,175,55,0.4)",
           }}>
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
           </div>
           <ArabicOrnament size={44} />
-          <div style={{ color: "rgba(79,109,138,0.75)", letterSpacing: "8px", fontSize: "13px", textTransform: "uppercase", margin: "16px 0 6px" }}>
+          <div style={{ color: "rgba(244,226,184,0.45)", letterSpacing: "6px", fontSize: "11px", textTransform: "uppercase", margin: "16px 0 6px" }}>
             The Wedding Of
           </div>
           <h1 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(48px, 14vw, 88px)", lineHeight: 1,
-            background: "linear-gradient(135deg, #35516B 0%, #C8A95B 45%, #E0C987 65%, #35516B 100%)",
+            background: "linear-gradient(135deg, #F4E2B8 0%, #D4AF37 40%, #B8960C 60%, #F4E2B8 100%)",
             backgroundSize: "200% auto", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             animation: "shimmer 5s linear infinite",
           }}>
             Balhaz
           </h1>
-          <div style={{ fontSize: "32px", color: "#C8A95B", margin: "4px 0", animation: "float 3s ease-in-out infinite" }}>♡</div>
+          <div style={{ fontSize: "32px", color: "#D4AF37", margin: "4px 0", animation: "float 3s ease-in-out infinite" }}>♡</div>
           <h1 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(48px, 14vw, 88px)", lineHeight: 1,
-            background: "linear-gradient(135deg, #35516B 0%, #C8A95B 45%, #E0C987 65%, #35516B 100%)",
+            background: "linear-gradient(135deg, #F4E2B8 0%, #D4AF37 40%, #B8960C 60%, #F4E2B8 100%)",
             backgroundSize: "200% auto", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             animation: "shimmer 5s linear infinite 0.5s",
           }}>
-            Widianti
+            Widiyanti
           </h1>
           <div style={{
             marginTop: "24px",
@@ -1165,7 +891,7 @@ export default function App() {
             padding: "10px 32px", display: "inline-block",
             background: "rgba(212,175,55,0.06)",
           }}>
-            <span style={{ color: "#C8A95B", letterSpacing: "4px", fontSize: "14px", fontFamily: "'Playfair Display', serif" }}>
+            <span style={{ color: "#D4AF37", letterSpacing: "4px", fontSize: "14px", fontFamily: "'Playfair Display', serif" }}>
               Kamis, 02 Juli 2026
             </span>
           </div>
@@ -1181,48 +907,40 @@ export default function App() {
 
       {/* ── SECTION 2: GREETING ── */}
       <Section id="greeting" style={{ padding: "80px 20px", textAlign: "center", maxWidth: "700px", margin: "0 auto" }}>
-        <GlassCard style={{
-          maxWidth: "680px",
-          margin: "0 auto",
-          padding: "36px 32px",
-          textAlign: "center",
-          boxShadow: "0 10px 40px rgba(212,175,55,0.10)"
-        }}>
-        <div>
-          <p style={{ fontFamily: "'Amiri', serif", fontSize: "clamp(18px, 4vw, 24px)", color: "#C8A95B", marginBottom: "24px" }}>
+        <div style={{ maxWidth: "680px", margin: "0 auto" }}>
+          <p style={{ fontFamily: "'Amiri', serif", fontSize: "clamp(18px, 4vw, 24px)", color: "#D4AF37", marginBottom: "24px" }}>
             Assalamu'alaikum Warahmatullahi Wabarakatuh
           </p>
           <GoldDivider />
-          <p style={{ color: "rgba(79,109,138,0.95)", lineHeight: 2, fontSize: "14px", margin: "24px 0" }}>
+          <p style={{ color: "rgba(244,226,184,0.8)", lineHeight: 2, fontSize: "15px", margin: "24px 0" }}>
             Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan kami.
           </p>
-          <p style={{ color: "rgba(79,109,138,0.90)", lineHeight: 2, fontSize: "14px" }}>
+          <p style={{ color: "rgba(244,226,184,0.7)", lineHeight: 2, fontSize: "14px" }}>
             Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.
           </p>
         </div>
-        </GlassCard>
       </Section>
 
       {/* ── SECTION 3: QURAN VERSE ── */}
-      <Section id="ayat" style={{ padding: "40px 20px 80px" }}>
+      <Section id="ayat" style={{ padding: "80px 20px" }}>
         <div style={{ maxWidth: "680px", margin: "0 auto", textAlign: "center" }}>
           <GlassCard style={{ padding: "40px 32px", position: "relative", overflow: "hidden" }}>
             <div style={{ position: "absolute", inset: 0, opacity: 0.04 }}>
-              {null}
+              <GeometricPattern size={300} opacity={1} />
             </div>
             <div style={{ position: "relative", zIndex: 1 }}>
-              <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "4px", textTransform: "uppercase", marginBottom: "20px" }}>
+              <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "4px", textTransform: "uppercase", marginBottom: "20px" }}>
                 QS. Ar-Rum : 21
               </div>
               <div style={{
                 fontFamily: "'Amiri', serif", fontSize: "clamp(22px, 5vw, 30px)",
-                color: "#C8A95B", lineHeight: 2, marginBottom: "24px", direction: "rtl",
+                color: "#D4AF37", lineHeight: 2, marginBottom: "24px", direction: "rtl",
                 textShadow: "0 0 20px rgba(212,175,55,0.3)",
               }}>
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
               </div>
               <GoldDivider />
-              <p style={{ color: "rgba(79,109,138,0.95)", fontStyle: "italic", lineHeight: 1.9, fontSize: "14px", marginTop: "20px" }}>
+              <p style={{ color: "rgba(244,226,184,0.8)", fontStyle: "italic", lineHeight: 1.9, fontSize: "14px", marginTop: "20px" }}>
                 "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
               </p>
             </div>
@@ -1233,7 +951,7 @@ export default function App() {
       {/* ── SECTION 4: BRIDE & GROOM ── */}
       <Section id="mempelai" style={{ padding: "80px 20px" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "40px" }}>
+          <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "40px" }}>
             Mempelai
           </div>
 
@@ -1246,7 +964,7 @@ export default function App() {
               <div style={{ position: "relative", marginBottom: "20px" }}>
                 <div style={{
                   width: "80px", height: "80px", margin: "0 auto",
-                  background: "linear-gradient(135deg, #C8A95B, #D8C08A)",
+                  background: "linear-gradient(135deg, #D4AF37, #B8960C)",
                   borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
                   fontSize: "32px", boxShadow: "0 0 30px rgba(212,175,55,0.3)",
                 }}>
@@ -1255,24 +973,24 @@ export default function App() {
               </div>
               <h2 style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(20px, 4vw, 26px)", color: "#4F6D8A", marginBottom: "6px",
+                fontSize: "clamp(20px, 4vw, 26px)", color: "#F4E2B8", marginBottom: "6px",
               }}>
                 Balhaz Ainun Naim
               </h2>
-              <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "3px", textTransform: "uppercase", marginBottom: "16px" }}>
+              <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "2px", marginBottom: "16px" }}>
                 Putra Ketiga dari Empat Bersaudara
               </div>
               <GoldDivider />
-              <div style={{ color: "rgba(79,109,138,0.90)", fontSize: "13px", lineHeight: 2, marginTop: "12px" }}>
+              <div style={{ color: "rgba(244,226,184,0.7)", fontSize: "13px", lineHeight: 2, marginTop: "12px" }}>
                 Putra dari<br />
-                <span style={{ color: "#C8A95B" }}>H. Jenal Abidin</span><br />
+                <span style={{ color: "#D4AF37" }}>H. Jaenal Abidin</span><br />
                 dan<br />
-                <span style={{ color: "#C8A95B" }}>Hj. Pupung Muflihat (Almh.)</span>
+                <span style={{ color: "#D4AF37" }}>Hj. Pupung Muflihat (Almh.)</span>
               </div>
               <div style={{
                 marginTop: "16px", padding: "8px 16px", borderRadius: "50px",
                 background: "rgba(212,175,55,0.08)", border: "1px solid rgba(212,175,55,0.2)",
-                color: "#7FA5C4", fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase",
+                color: "rgba(244,226,184,0.5)", fontSize: "11px", letterSpacing: "2px",
               }}>
                 PURWAKARTA
               </div>
@@ -1286,13 +1004,13 @@ export default function App() {
               <div style={{
                 fontFamily: "'Playfair Display', serif",
                 fontSize: "clamp(28px, 6vw, 42px)",
-                background: "linear-gradient(135deg, #4F6D8A, #C8A95B, #4F6D8A)",
+                background: "linear-gradient(135deg, #F4E2B8, #D4AF37, #F4E2B8)",
                 backgroundSize: "200% auto", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
                 animation: "shimmer 4s linear infinite, float 4s ease-in-out infinite",
                 textShadow: "0 0 30px rgba(212,175,55,0.4)",
                 whiteSpace: "nowrap",
               }}>
-                
+                B ♡ W
               </div>
             </div>
 
@@ -1301,7 +1019,7 @@ export default function App() {
               <div style={{ marginBottom: "20px" }}>
                 <div style={{
                   width: "80px", height: "80px", margin: "0 auto",
-                  background: "linear-gradient(135deg, #C8A95B, #D8C08A)",
+                  background: "linear-gradient(135deg, #D4AF37, #B8960C)",
                   borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
                   fontSize: "32px", boxShadow: "0 0 30px rgba(212,175,55,0.3)",
                 }}>
@@ -1310,24 +1028,24 @@ export default function App() {
               </div>
               <h2 style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(20px, 4vw, 26px)", color: "#4F6D8A", marginBottom: "6px",
+                fontSize: "clamp(20px, 4vw, 26px)", color: "#F4E2B8", marginBottom: "6px",
               }}>
-                Widianti
+                Widiyanti
               </h2>
-              <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "3px", textTransform: "uppercase", marginBottom: "16px" }}>
+              <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "2px", marginBottom: "16px" }}>
                 Putri Ketiga dari Lima Bersaudara
               </div>
               <GoldDivider />
-              <div style={{ color: "rgba(79,109,138,0.90)", fontSize: "13px", lineHeight: 2, marginTop: "12px" }}>
+              <div style={{ color: "rgba(244,226,184,0.7)", fontSize: "13px", lineHeight: 2, marginTop: "12px" }}>
                 Putri dari<br />
-                <span style={{ color: "#C8A95B" }}>Bapak Suparman</span><br />
+                <span style={{ color: "#D4AF37" }}>Bapak Suparman</span><br />
                 dan<br />
-                <span style={{ color: "#C8A95B" }}>Ibu Maryati</span>
+                <span style={{ color: "#D4AF37" }}>Ibu Maryati</span>
               </div>
               <div style={{
                 marginTop: "16px", padding: "8px 16px", borderRadius: "50px",
                 background: "rgba(212,175,55,0.08)", border: "1px solid rgba(212,175,55,0.2)",
-                color: "#7FA5C4", fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase",
+                color: "rgba(244,226,184,0.5)", fontSize: "11px", letterSpacing: "2px",
               }}>
                 BANDUNG BARAT
               </div>
@@ -1339,12 +1057,12 @@ export default function App() {
       {/* ── SECTION 5: COUNTDOWN ── */}
       <Section style={{ padding: "80px 20px" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Menuju Hari Bahagia
           </div>
           <div style={{
             fontFamily: "'Playfair Display', serif", fontSize: "clamp(18px, 4vw, 24px)",
-            color: "rgba(79,109,138,0.90)", marginBottom: "36px",
+            color: "rgba(244,226,184,0.7)", marginBottom: "36px",
           }}>
             Kamis, 02 Juli 2026
           </div>
@@ -1359,13 +1077,13 @@ export default function App() {
                 <div style={{
                   fontFamily: "'Playfair Display', serif",
                   fontSize: "clamp(32px, 8vw, 52px)", fontWeight: "700",
-                  background: "linear-gradient(135deg, #4F6D8A, #C8A95B)",
+                  background: "linear-gradient(135deg, #F4E2B8, #D4AF37)",
                   WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
                   lineHeight: 1, animation: "countPulse 1s ease-in-out infinite",
                 }}>
                   {String(v).padStart(2, "0")}
                 </div>
-                <div style={{ color: "rgba(79,109,138,0.70)", fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", marginTop: "8px" }}>
+                <div style={{ color: "rgba(244,226,184,0.4)", fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", marginTop: "8px" }}>
                   {l}
                 </div>
               </GlassCard>
@@ -1377,7 +1095,7 @@ export default function App() {
       {/* ── SECTION 6: EVENT DETAILS ── */}
       <Section id="acara" style={{ padding: "80px 20px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "40px" }}>
+          <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "40px" }}>
             Detail Acara
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
@@ -1389,16 +1107,16 @@ export default function App() {
                 <div style={{ fontSize: "36px", marginBottom: "16px" }}>{emoji}</div>
                 <h3 style={{
                   fontFamily: "'Playfair Display', serif", fontSize: "22px",
-                  color: "#C8A95B", marginBottom: "12px",
+                  color: "#D4AF37", marginBottom: "12px",
                 }}>
                   {title}
                 </h3>
                 <GoldDivider />
-                <div style={{ color: "#4F6D8A", fontSize: "14px", lineHeight: 2, marginTop: "16px" }}>
+                <div style={{ color: "#F4E2B8", fontSize: "15px", lineHeight: 2, marginTop: "16px" }}>
                   <div>Kamis, 02 Juli 2026</div>
-                  <div style={{ color: "#C8A95B", fontWeight: "600" }}>{time}</div>
+                  <div style={{ color: "#D4AF37", fontWeight: "600" }}>{time}</div>
                 </div>
-                <div style={{ color: "#4F6D8A", fontSize: "13px", lineHeight: 1.8, marginTop: "12px" }}>
+                <div style={{ color: "rgba(244,226,184,0.6)", fontSize: "13px", lineHeight: 1.8, marginTop: "12px" }}>
                   Kp. Palasari RT 01 RW 11<br />
                   Desa Cirawa Mekar, Kec. Cipatat<br />
                   Bandung Barat
@@ -1409,9 +1127,9 @@ export default function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                      background: "linear-gradient(135deg, #C8A95B, #D8C08A)",
+                      background: "linear-gradient(135deg, #D4AF37, #B8960C)",
                       borderRadius: "50px", padding: "10px 22px",
-                      color: "#FAF5EA", textDecoration: "none", fontSize: "13px",
+                      color: "#0A0A0A", textDecoration: "none", fontSize: "13px",
                       fontWeight: "600", display: "flex", alignItems: "center", gap: "6px",
                     }}
                   >
@@ -1419,13 +1137,13 @@ export default function App() {
                   </a>
                   <button
                     onClick={() => {
-                      const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Balhaz+%26+Widianti&dates=20260702T010000Z/20260702T060000Z&details=Akad+Nikah+%26+Resepsi&location=Kp.+Palasari+RT+01+RW+11,+Desa+Cirawa+Mekar,+Kec.+Cipatat,+Bandung+Barat`;
+                      const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Balhaz+%26+Widiyanti&dates=20260702T010000Z/20260702T060000Z&details=Akad+Nikah+%26+Resepsi&location=Kp.+Palasari+RT+01+RW+11,+Desa+Cirawa+Mekar,+Kec.+Cipatat,+Bandung+Barat`;
                       window.open(url, "_blank");
                     }}
                     style={{
                       background: "rgba(212,175,55,0.15)", border: "1px solid rgba(212,175,55,0.3)",
                       borderRadius: "50px", padding: "10px 22px",
-                      color: "#C8A95B", fontSize: "13px", fontWeight: "600", cursor: "pointer",
+                      color: "#D4AF37", fontSize: "13px", fontWeight: "600", cursor: "pointer",
                     }}
                   >
                     📅 Save to Calendar
@@ -1437,117 +1155,56 @@ export default function App() {
         </div>
       </Section>
 
-
-      {/* ── SECTION 7: DOA & RESTU ── */}
+      {/* ── SECTION 7: LOVE JOURNEY ── */}
       <Section style={{ padding: "80px 20px" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <GlassCard style={{
-            padding: "48px 32px",
-            textAlign: "center",
-            position: "relative",
-            overflow: "hidden",
-            transform: "perspective(1000px) rotateX(2deg)",
-            boxShadow: `
-              0 20px 50px rgba(212,175,55,0.15),
-              0 0 30px rgba(212,175,55,0.12),
-              inset 0 1px 0 rgba(255,255,255,0.4)
-            `,
-            transition: "all 0.4s ease",
-          }}>
-
+        <div style={{ maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
+          <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "40px" }}>
+            Perjalanan Cinta
+          </div>
+          <div style={{ position: "relative" }}>
             <div style={{
-              position: "absolute",
-              width: "250px",
-              height: "250px",
-              borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(212,175,55,0.15), transparent 70%)",
-              top: "-80px",
-              left: "50%",
+              position: "absolute", left: "50%", top: 0, bottom: 0,
+              width: "1px", background: "linear-gradient(to bottom, transparent, #D4AF37, transparent)",
               transform: "translateX(-50%)",
-              pointerEvents: "none",
             }} />
-
-            <div style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%,-50%)",
-              fontFamily: "'Amiri', serif",
-              fontSize: "120px",
-              color: "rgba(212,175,55,0.05)",
-              pointerEvents: "none",
-              userSelect: "none",
-            }}>
-              ﷽
-            </div>
-            <div style={{
-              fontSize: "54px",
-              marginBottom: "20px",
-              filter: "drop-shadow(0 0 15px rgba(212,175,55,0.45))",
-              animation: "float 4s ease-in-out infinite"
-            }}>
-              🤲
-            </div>
-
-            <div style={{
-              color: "#C8A95B",
-              fontSize: "12px",
-              letterSpacing: "5px",
-              textTransform: "uppercase",
-              marginBottom: "18px"
-            }}>
-              Doa & Restu
-            </div>
-
-            <div style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "clamp(22px,5vw,34px)",
-              textShadow: "0 0 20px rgba(212,175,55,0.25)",
-              color: "#C8A95B",
-              lineHeight: 1.8,
-              marginBottom: "24px",
-            }}>
-              “Barakallahu laka wa baraka ‘alaika”
-              <br />
-              “wa jama'a bainakuma fii khair”
-            </div>
-
-            <p style={{
-              color: "rgba(79,109,138,0.92)",
-              fontSize: "14px",
-              lineHeight: 2,
-              marginBottom: "24px"
-            }}>
-              Semoga Allah memberkahimu,
-              melimpahkan keberkahan atasmu,
-              dan mempersatukan kalian berdua
-              dalam kebaikan.
-            </p>
-
-            <div style={{
-              width: "80px",
-              height: "1px",
-              background: "rgba(212,175,55,0.3)",
-              margin: "24px auto"
-            }} />
-
-            <p style={{
-              color: "rgba(79,109,138,0.82)",
-              fontSize: "14px",
-              lineHeight: 2,
-            }}>
-              Kehadiran serta doa restu
-              Bapak/Ibu/Saudara/i merupakan
-              hadiah terindah bagi kami.
-            </p>
-          </GlassCard>
+            {[
+              { icon: "🌸", title: "Perkenalan", desc: "Awal mula pertemuan yang penuh kebaikan" },
+              { icon: "🤝", title: "Silaturahmi Keluarga", desc: "Dua keluarga bersatu dalam keberkahan" },
+              { icon: "💍", title: "Khitbah", desc: "Ikatan suci yang mengawali segalanya" },
+              { icon: "🕌", title: "Akad Nikah", desc: "02 Juli 2026 — Hari paling bahagia" },
+            ].map(({ icon, title, desc }, i) => (
+              <div key={title} style={{
+                display: "flex", alignItems: "flex-start", gap: "20px",
+                marginBottom: "32px", flexDirection: i % 2 === 0 ? "row" : "row-reverse",
+                textAlign: i % 2 === 0 ? "left" : "right",
+              }}>
+                <div style={{ flex: 1 }}>
+                  <GlassCard style={{ padding: "20px 24px" }}>
+                    <h4 style={{ fontFamily: "'Playfair Display', serif", color: "#D4AF37", fontSize: "17px", marginBottom: "6px" }}>
+                      {title}
+                    </h4>
+                    <p style={{ color: "rgba(244,226,184,0.65)", fontSize: "13px", lineHeight: 1.7 }}>{desc}</p>
+                  </GlassCard>
+                </div>
+                <div style={{
+                  width: "44px", height: "44px", flexShrink: 0,
+                  background: "linear-gradient(135deg, #D4AF37, #B8960C)",
+                  borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: "20px", zIndex: 1, boxShadow: "0 0 20px rgba(212,175,55,0.4)",
+                }}>
+                  {icon}
+                </div>
+                <div style={{ flex: 1 }} />
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
       {/* ── SECTION 8: ISLAMIC ART GALLERY ── */}
       <Section style={{ padding: "80px 20px" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "40px" }}>
+          <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "40px" }}>
             Kaligrafi & Seni Islam
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px" }}>
@@ -1570,13 +1227,13 @@ export default function App() {
                 }}>
                 <div style={{
                   fontFamily: "'Amiri', serif", fontSize: "26px",
-                  color: "#C8A95B", marginBottom: "12px", direction: "rtl",
+                  color: "#D4AF37", marginBottom: "12px", direction: "rtl",
                   textShadow: "0 0 20px rgba(212,175,55,0.3)",
                 }}>
                   {ar}
                 </div>
                 <GoldDivider />
-                <p style={{ color: "rgba(79,109,138,0.82)", fontSize: "12px", lineHeight: 1.6, marginTop: "10px" }}>{id}</p>
+                <p style={{ color: "rgba(244,226,184,0.55)", fontSize: "12px", lineHeight: 1.6, marginTop: "10px" }}>{id}</p>
               </GlassCard>
             ))}
           </div>
@@ -1586,22 +1243,22 @@ export default function App() {
       {/* ── SECTION 9: GIFT ── */}
       <Section id="gift" style={{ padding: "80px 20px" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Wedding Gift
           </div>
-          <p style={{ color: "#4F6D8A", fontSize: "14px", marginBottom: "36px" }}>
+          <p style={{ color: "rgba(244,226,184,0.6)", fontSize: "14px", marginBottom: "36px" }}>
             Doa restu Anda adalah hadiah terindah bagi kami. Namun jika Anda ingin memberikan hadiah:
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-            <GiftItem label="DANA" number="083843197567" name="Widianti" />
+            <GiftItem label="DANA" number="083843197567" name="Widiyanti" />
             <GiftItem label="DANA" number="083816937951" name="Balhaz Ainun Naim" />
             <GiftItem label="BANK BRI" number="435601024030539" name="BALHAZ AINUN NAIM" />
           </div>
           <GlassCard style={{ marginTop: "24px", padding: "20px 24px", textAlign: "left" }}>
-            <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "3px", textTransform: "uppercase", marginBottom: "8px" }}>
+            <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "2px", marginBottom: "8px" }}>
               📦 ALAMAT KIRIM HADIAH
             </div>
-            <p style={{ color: "rgba(79,109,138,0.92)", fontSize: "14px", lineHeight: 1.9 }}>
+            <p style={{ color: "rgba(244,226,184,0.75)", fontSize: "14px", lineHeight: 1.9 }}>
               Kp. Palasari RT 01 RW 11<br />
               Desa Cirawa Mekar, Kecamatan Cipatat<br />
               Bandung Barat
@@ -1614,10 +1271,10 @@ export default function App() {
       <Section id="rsvp" style={{ padding: "80px 20px" }}>
         <div style={{ maxWidth: "600px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "40px" }}>
-            <div style={{ color: "#C8A95B", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "10px" }}>
+            <div style={{ color: "#D4AF37", fontSize: "12px", letterSpacing: "5px", textTransform: "uppercase", marginBottom: "10px" }}>
               RSVP & Ucapan
             </div>
-            <p style={{ color: "#4F6D8A", fontSize: "14px" }}>
+            <p style={{ color: "rgba(244,226,184,0.6)", fontSize: "14px" }}>
               Konfirmasi kehadiran dan sampaikan doa terbaik Anda
             </p>
           </div>
@@ -1632,23 +1289,23 @@ export default function App() {
         <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
           <div style={{
             position: "absolute", inset: 0,
-            background: "radial-gradient(ellipse at 50% 60%, rgba(127,165,196,0.3) 0%, transparent 60%)",
+            background: "radial-gradient(ellipse at 50% 60%, rgba(11,61,46,0.3) 0%, transparent 60%)",
           }} />
         </div>
         <div style={{ position: "relative", zIndex: 2 }}>
           <div style={{ animation: "float 5s ease-in-out infinite" }}>
-            {null}
+            <CrescentMoon size={100} />
           </div>
           <h2 style={{
             fontFamily: "'Amiri', serif",
-            fontSize: "clamp(26px, 6vw, 38px)", color: "#C8A95B",
+            fontSize: "clamp(26px, 6vw, 38px)", color: "#D4AF37",
             marginBottom: "24px", marginTop: "20px",
             textShadow: "0 0 30px rgba(212,175,55,0.4)",
           }}>
             Jazakumullahu Khairan
           </h2>
           <p style={{
-            color: "rgba(79,109,138,0.92)", maxWidth: "480px", margin: "0 auto 28px",
+            color: "rgba(244,226,184,0.75)", maxWidth: "480px", margin: "0 auto 28px",
             lineHeight: 2, fontSize: "14px",
           }}>
             Atas doa, restu, dan kehadiran Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih yang sebesar-besarnya. Semoga Allah SWT senantiasa melimpahkan keberkahan kepada kita semua.
@@ -1657,22 +1314,22 @@ export default function App() {
           <h3 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(22px, 5vw, 32px)",
-            background: "linear-gradient(135deg, #4F6D8A, #C8A95B, #4F6D8A)",
+            background: "linear-gradient(135deg, #F4E2B8, #D4AF37, #F4E2B8)",
             backgroundSize: "200% auto", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             animation: "shimmer 4s linear infinite",
             marginTop: "24px",
           }}>
-            Balhaz Ainun Naim & Widianti
+            Balhaz Ainun Naim & Widiyanti
           </h3>
           <div style={{
-            marginTop: "16px", color: "#C8A95B", fontSize: "14px", letterSpacing: "4px",
+            marginTop: "16px", color: "#D4AF37", fontSize: "14px", letterSpacing: "4px",
           }}>
             02 . 07 . 2026
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "40px", opacity: 0.3 }}>
-            {null}
-            {null}
-            {null}
+            <Lantern size={35} />
+            <Lantern size={45} />
+            <Lantern size={35} />
           </div>
         </div>
       </Section>
